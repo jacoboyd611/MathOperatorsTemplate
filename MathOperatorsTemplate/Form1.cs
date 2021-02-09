@@ -25,15 +25,18 @@ namespace MathOperatorsTemplate
         private void runButton_Click(object sender, EventArgs e)
         {
             //1. Declare a string variable, store your name in it, and display it
-
-
+            string name = "Jacob Boyd";
+            outputLabel.Text = name;
             //2. Declare an integer variable, store your age in it, and display it
+            int age = 16;
+            outputLabel.Text += $"\n{age}";
 
-
-            //3. Declare a double variale, store a decimal number, and display it
-
+            //3. Declare a double variable, store a decimal number, and display it
+            double number = 7.7;
+            outputLabel.Text += $"\n{number}";
 
             //4. Combine a text with a variable to display "Hello" followed by your name
+            outputLabel.Text += $"\n\nHello {name}";
 
 
             /* 5. Simple arithmetic is done by using the +, -, * and / operators, 
@@ -48,11 +51,11 @@ namespace MathOperatorsTemplate
                x - y = 2
             */
 
-            //int x = 6;
-            //int y = 4;
-            //int answer = x + y;
+            int x = 6;
+            int y = 4;
+            int answer = x - y;
 
-            //outputLabel.Text += $"\n\nx + y = {answer}";
+            outputLabel.Text += $"\n\nx - y = {answer}";
 
 
             /* 6. Create a program that calculates how much money an employee has made based
@@ -70,7 +73,10 @@ namespace MathOperatorsTemplate
                Total Pay: 122
             */
 
-
+            double payRate = 15.25;
+            int hoursWorked = 8;
+            double payAnswer = payRate * hoursWorked;
+            outputLabel.Text += $"\n\nRate of Pay: {payRate}\nHours Worked: {hoursWorked}\nTotal Pay: {payAnswer}";
             /* 7. Create a program which calculates the tax amount for meal at a restaurant.
                    
               - Create a variable to hold the bill amount, (billAmount), of 22.50
@@ -81,14 +87,19 @@ namespace MathOperatorsTemplate
                 Bill Amount: 22.50
                 13% Tax: 2.925             
             */
-
+            double billAmount = 22.50;
+            double taxRate = 0.13;
+            double taxAmount = billAmount * taxRate;
+            outputLabel.Text += $"\n\nBill Amount: {billAmount}\n13% Tax: {taxAmount}";
 
             // 8. Increment your age variable by 1 using ++ and display it
+            age++;
+            outputLabel.Text += $"\n\n{age}";
 
 
-            // 9. Decrement the value created above by 1 using -- and dislay it          
-
-
+            // 9. Decrement the value created above by 1 using -- and display it          
+            age--;
+            outputLabel.Text += $"\n{age}";
         }
     }
 }
